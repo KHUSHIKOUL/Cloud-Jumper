@@ -31,8 +31,8 @@
 
     // Game variables
     let bird = { x: 150, y: 200, width: 40, height: 40, velocity: 0 };
-    let gravity = 0.05; 
-    let pipeSpeed = 1.3; 
+    let gravity = 0.02; 
+    let pipeSpeed = 0.8; 
     let gapSize = 160; // Adjustable gap size
     let pipes = [];
     let score = 0;
@@ -207,7 +207,7 @@
     // Restart game on Enter key
     document.addEventListener("keydown", e => {
         if (e.code === "Space" && !isGameOver) {
-            bird.velocity = -2; // Bird jump
+            bird.velocity = -1.5; // Bird jump
         } else if (e.code === "Enter" && isGameOver) {
             startGame();
         }
