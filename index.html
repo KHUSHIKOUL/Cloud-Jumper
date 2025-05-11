@@ -31,15 +31,15 @@
 
     // Game variables
     let bird = { x: 150, y: 200, width: 40, height: 40, velocity: 0 };
-    let gravity = 0.05; // Reduced gravity for slower descent
-    let pipeSpeed = 1; // Further reduced pipe speed
-    let gapSize = 180; // Adjustable gap size
+    let gravity = 0.05; 
+    let pipeSpeed = 1.3; 
+    let gapSize = 160; // Adjustable gap size
     let pipes = [];
     let score = 0;
     let lives = 5;
     let isGameOver = false;
     let clouds = [];
-    const cloudSpeed = 0.1; // Slower cloud movement
+    const cloudSpeed = 0.4;
 
     // Initialize pipes
     function initPipes() {
