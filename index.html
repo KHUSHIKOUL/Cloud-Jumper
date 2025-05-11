@@ -212,7 +212,16 @@
             startGame();
         }
     });
+    // Make the bird jump on click
+    canvas.addEventListener("click", (e) => {
+        const distanceX = e.clientX - bird.x;
+        const distanceY = e.clientY - bird.y;
+        const distance = Math.sqrt(distanceX * distanceX + distanceY * distanceY);
 
+        if (distance < bird.width / 2) {
+            bird.velocity = -2; // Jump when the bird is clicked
+        }
+    });
     // Initialize and start the game
     startGame();
 </script>
